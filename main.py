@@ -1,11 +1,11 @@
 import streamlit as st
 from openai import OpenAI
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 
 # Load API key from .env file
-load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
+# load_dotenv()
+api_key = st.secrets["OPENAI_API_KEY"]
 
 # Load system prompt once
 @st.cache_resource
